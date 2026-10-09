@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OffPhase_Out Of Phase</title>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OFFPHASE — Out of Phase</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f3;
+    color:#111;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+header{
+    height:75px;
+    padding:0 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    background:#f5f5f3;
+    z-index:100;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#111;
+    text-decoration:none;
+    font-size:11px;
+    letter-spacing:1.5px;
+}
+
+.hero{
+    min-height:calc(100vh - 75px);
+    background-image:url("./images/_MG_1009.jpg");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    display:flex;
+    align-items:flex-end;
+    padding:7%;
+}
+
+.eyebrow{
+    font-size:10px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(70px,13vw,180px);
+    line-height:.78;
+    letter-spacing:-8px;
+}
+
+.hero h1 span{
+    font-style:italic;
+}
+
+.hero p{
+    max-width:380px;
+    color:#aaa;
+    margin:35px 0;
+}
+
+.button{
+    display:inline-block;
+    padding:16px 25px;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    border:1px solid #111;
+    font-size:11px;
+    letter-spacing:1.5px;
+    cursor:pointer;
+}
+
+.white{
+    background:white;
+    color:#111;
+    border-color:white;
+}
+
+section{
+    padding:9% 5%;
+}
+
+.statement{
+    min-height:65vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.statement h2,
+.about h2{
+    font-size:clamp(45px,7vw,100px);
+    line-height:.9;
+    letter-spacing:-5px;
+}
+
+.section-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:45px;
+    letter-spacing:-3px;
+}
+
+.section-title a{
+    color:#111;
+    font-size:11px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.product{
+    cursor:pointer;
+}
+
+.product-image{
+    width:100%;
+    aspect-ratio:3/4;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.placeholder{
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.product h3{
+    font-size:13px;
+    margin-top:15px;
+}
+
+.product p{
+    font-size:12px;
+    color:#666;
+    margin-top:6px;
+}
+
+.about{
+    background:#111;
+    background-image:url("./images/_MG_1025.jpg");
+    background-size:contain;
+    background-position:bottom;
+    color:#fff;
+}
+
+.about p:last-child{
+    max-width:650px;
+    color:#aaa;
+    margin-top:35px;
+    font-size:18px;
+}
+
+.contact{
+    min-height:50vh;
+}
+
+.socials{
+    display:flex;
+    gap:30px;
+    margin-top:35px;
+}
+
+.socials a{
+    color:#111;
+}
+
+.cart-section{
+    display:none;
+    padding:8%;
+    min-height:80vh;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:25px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.cart-item button{
+    padding:8px 15px;
+    background:none;
+    border:1px solid #aaa;
+    cursor:pointer;
+}
+
+.total{
+    margin-top:35px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+footer{
+    padding:30px 5%;
+    border-top:1px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+@media(max-width:800px){
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:9px;
+    }
+
+    .hero h1{
+        font-size:20vw;
+        letter-spacing:-5px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .statement h2,
+    .about h2{
+        letter-spacing:-3px;
+    }
+
+    .socials{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">OFFPHASE</div>
+
+<nav>
+<a href="#shop">SHOP</a>
+<a href="#about">ABOUT</a>
+<a href="#contact">CONTACT</a>
+<a href="#cart">CART (<span id="cartCount">0</span>)</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<div class="eyebrow">
+OFFPHASE
+</div>
+
+<h1>
+OUT OF<br>
+<span>PHASE.</span>
+</h1>
+
+<p>
+Premium streetwear for those who move outside the usual.
+</p>
+
+<a href="#shop" class="button white">
+SHOP THE DROP
+</a>
+
+</div>
+
+</section>
+
+
+<!-- STATEMENT -->
+
+<section class="statement">
+
+<div class="eyebrow">
+THE IDEA
+</div>
+
+<h2>
+NOT OUT OF PLACE.<br>
+JUST OUT OF PHASE.
+</h2>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section id="shop">
+
+<div class="section-title">
+
+<div>
+<div class="eyebrow">
+LATEST DROPS
+</div>
+
+<h2>
+OFFPHASE 001
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="products" id="products"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section  class="about" id="about">
+
+<div  class="eyebrow">
+ABOUT OFFPHASE
+</div>
+
+<h2>
+DIFFERENT<br>
+BY DESIGN.
+</h2>
+
+<p>
+OFFPHASE is a Nigerian streetwear label built around individuality,
+oversized silhouettes and a mindset that refuses to follow the usual phase.
+</p>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="eyebrow">
+STAY CONNECTED
+</div>
+
+<h2>
+FOLLOW THE PHASE.
+</h2>
+
+<div class="socials">
+
+<a href="#">Instagram</a>
+
+<a href="https://www.tiktok.com/@officialoffphase?_r=1&_d=eh8k73hl78mmkk&sec_uid=MS4wLjABAAAAJsGHj_GO_U_GuGYq4kvDpfM7i-tmlh2brwT4mQqZKDlq2he4PmEMDErPeptknmU0&share_author_id=7692364186366297110&sharer_language=en&source=h5_m&u_code=e63dicd60m2gea&item_author_type=2&utm_source=copy&share_enter_from=others_homepage&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=4DFB8D1E-12A6-4AF3-A160-4110CE403240&user_id=7191427193259049989&sec_user_id=MS4wLjABAAAAiOKuz5GCAZJcoYtmpE2hia_KRK03hqtCXBue-o_9OVEcG9d5RG7TKdgWN62X0XbJ&utm_campaign=client_share&panel_source_v2=share_panel&ug_btm=b0,b5836&social_share_type=5&share_app_id=1233">TikTok</a>
+
+<a href="https://wa.me/2348163137826">
+WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CART -->
+
+<section class="cart-section" id="cart">
+
+<div class="eyebrow">
+YOUR SELECTION
+</div>
+
+<h2>
+CART.
+</h2>
+
+<div id="cartItems"></div>
+
+<div class="total">
+TOTAL: ₦<span id="cartTotal">0</span>
+</div>
+
+<br>
+
+<button class="button" onclick="checkout()">
+CHECKOUT
+</button>
+
+</section>
+
+
+<footer>
+
+<span>
+©️ <span id="year"></span> OFFPHASE
+</span>
+
+<span>
+OUT OF PHASE.
+</span>
+
+</footer>
+
+
+<script>
+
+const products = [
+
+{
+name:"OFFPHASE 001 TEE",
+price:85000,
+image: "./images/tee.jpg"
+},
+
+{
+name:"OUT OF PHASE TEE",
+price:90000,
+image:"./images/_MG_0974.jpg"
+},
+
+{
+name:"PHASE ZIP HOODIE",
+price:145000,
+image:"./_MG_0962.jpg"
+},
+
+{
+name:"OFFPHASE SWEATPANT",
+price:120000,
+image:"./_MG_0963.jpg"
+},
+
+{
+name:"OFFPHASE CAP",
+price:55000,
+image:"./_MG_0964.jpg"
+},
+
+{
+name:"PHASE 001 SHORT",
+price:75000,
+image:"./_MG_0965.jpg"
+},
+
+{
+name:"OUT OF SYNC TEE",
+price:85000,
+image:"./_MG_0966.jpg"
+},
+
+{
+name:"OFFPHASE HOODIE",
+price:150000,
+image:""
+}
+
+];
+
+
+let cart = [];
+
+
+function money(number){
+
+return Number(number).toLocaleString("en-NG");
+
+}
+
+
+function displayProducts(){
+
+const container =
+document.getElementById("products");
+
+container.innerHTML = "";
+
+products.forEach((product,index)=>{
+
+const div =
+document.createElement("div");
+
+div.className = "product";
+
+div.innerHTML = `
+
+<div class="product-image">
+
+${
+product.image
+
+?
+
+`<img src="${product.image}" alt="${product.name}">`
+
+:
+
+`<div class="placeholder">
+OFFPHASE
+</div>`
+
+}
+
+</div>
+
+<h3>
+${product.name}
+</h3>
+
+<p>
+₦${money(product.price)}
+</p>
+
+`;
+
+div.onclick = function(){
+
+addToCart(index);
+
+};
+
+container.appendChild(div);
+
+});
+
+}
+
+
+function addToCart(index){
+
+cart.push(products[index]);
+
+updateCart();
+
+document
+.getElementById("cart")
+.style.display = "block";
+
+document
+.getElementById("cart")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function updateCart(){
+
+document
+.getElementById("cartCount")
+.textContent = cart.length;
+
+
+const container =
+document.getElementById("cartItems");
+
+container.innerHTML = "";
+
+let total = 0;
+
+
+cart.forEach((item,index)=>{
+
+total += item.price;
+
+const div =
+document.createElement("div");
+
+div.className = "cart-item";
+
+div.innerHTML = `
+
+<div>
+
+<strong>
+${item.name}
+</strong>
+
+<br>
+
+<small>
+₦${money(item.price)}
+</small>
+
+</div>
+
+<button onclick="removeItem(${index})">
+REMOVE
+</button>
+
+`;
+
+container.appendChild(div);
+
+});
+
+
+document
+.getElementById("cartTotal")
+.textContent = money(total);
+
+}
+
+
+function removeItem(index){
+
+cart.splice(index,1);
+
+updateCart();
+
+}
+
+
+function checkout(){
+
+if(cart.length === 0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+alert(
+"Checkout is ready to connect to Paystack, Flutterwave or another payment provider."
+);
+
+}
+
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+displayProducts();
+
+</script>
+
+</body>
+</html>
+</head>
+<body>
+    
+</body>
+</html>
